@@ -1,0 +1,47 @@
+body {
+    margin: 5%;
+    margin-top: 20px;
+    background-color: lightgrey;
+}
+
+.inline-div-find {
+    display:inline-block;
+    width: 20%;
+    align: left;
+    margin-right: 2%;
+}
+
+.inline-div-add {
+    display:inline-block;
+    width: 75%;
+    align: right;
+}
+
+.form-control {
+    width: 100%
+}
+
+.task {
+    background-color: PaleGoldenrod;
+    display:inline-block;
+    width: 100%;
+    padding: 2%;
+    padding-right: 20px;
+    border-radius:20px;
+}
+
+#opis {
+    display:inline-block;
+    width: 90%;
+}
+
+#find_task {
+    width: 100%
+}
+
+#remove {
+    display:inline-block;
+    vertical-align: top;
+    float: right;
+    width: 60px;
+}

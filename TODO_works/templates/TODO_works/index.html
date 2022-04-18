@@ -1,0 +1,48 @@
+{% extends "TODO_works/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+<div class="inline-div-find">
+    <form action="{% url 'find' %}" method="post">
+        {% csrf_token %}
+        <label for="find_task">Znajdź w zadaniach:</label><br>
+        <input type="text" id="find_task" name="find_task" placeholder="Szukana fraza"><br>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Znajdź">
+    </form>
+</div>
+
+<div class="inline-div-add">
+    <form action="{% url 'add_task' %}" method="post" id="add_task_form">
+        {% csrf_token %}
+        <span class="add">Opis zadania</span>
+        <textarea class="form-control" id="description" name="description" required="required" placeholder="Opis zadania"></textarea>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Dodaj zadanie">
+    </form>
+</div>
+<hr>
+
+{% for task in tasks %}
+
+<div class="task">
+
+    <p id="opis">
+        {{ task.opis }}
+    </p>
+
+    <div id="remove">
+        <a href="{% url 'delete_task' task.id%}"><button type="button" class="btn btn-primary btn-sm" style="background-color: #a00000; border-color: #a00000;">Remove</button></a>
+    </div>
+
+</div>
+<hr>
+
+{% endfor %}
+
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'TODO_works/index.js' %}"></script>
+{% endblock %}
