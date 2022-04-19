@@ -3,7 +3,7 @@
 ## Jak uruchomić
 
 w katalogu python-works\works\ wpisac python manage.py runserver\
-w przegladarce http://127.0.0.1:8000/\
+w przegladarce http://127.0.0.1:8000/ \
 Logowanie do panelu administratora:\
 username: a@a.pl     \
 password: a
