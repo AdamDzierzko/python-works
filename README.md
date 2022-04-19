@@ -11,16 +11,16 @@ password: a
 ## Funkcje w programie
 
 ##### index
-Wyświetla wszystkie zapisane w bazie zadania, wg kolejności ID. Funkcja jest uruchamiana po wejściu na stronę główną \ lub naciśnięcie przycisku 'Strona główna'.
+Wyświetla wszystkie zapisane w bazie zadania, wg kolejności ID. Funkcja jest uruchamiana po wejściu na stronę główną lub naciśnięcie przycisku 'Strona główna'.
 
 #### add_new_task
-Pobiera treść zadania z formularza, następnie dane są przekazywne do funkcji za pomocą funkcji w addtask() w index.js. \ Umożliwia to tworzenie Single Page Application, która posiadania tylko jednen plik html. Widok jest zmieniany dynamicznie \ podczas interakcji z użytkownikiem. Umożliwi to min. szybsze działanie, bez potrzeby ciągłego przeładowywania strony.
+Pobiera treść zadania z formularza, następnie dane są przekazywne do funkcji za pomocą funkcji w addtask() w index.js. Umożliwia to tworzenie Single Page Application, która posiadania tylko jednen plik html. Widok jest zmieniany dynamicznie podczas interakcji z użytkownikiem. Umożliwi to min. szybsze działanie, bez potrzeby ciągłego przeładowywania strony.
 
 #### delete_task
-Usuwa wskazane zadanie poprzez naciśnięcie przycisku w etykiecie zadania. Zadanie jest wskazywane poprzez nr ID umieszczony \ w adresie url przy wywoływaniu funkcji.
+Usuwa wskazane zadanie poprzez naciśnięcie przycisku w etykiecie zadania. Zadanie jest wskazywane poprzez nr ID umieszczony w adresie url przy wywoływaniu funkcji.
 
 #### find
-Pobiera wpisaną w formularz frazę i przekazuje bezpośrednio do funkcji metodą post. Następnie jest sprawdzana obecność \ szukanej frazy kolejno we wszystkich opisach zadań w bazie danych. Jeżli fraza znajduje się w opisie, pojedyncze zadanie \ jest dodawane do listy. Jeżeli nie to jest pomijany. Lista obiektów jest przekazana do wyświetlenia w pliku index.html. \
+Pobiera wpisaną w formularz frazę i przekazuje bezpośrednio do funkcji metodą post. Następnie jest sprawdzana obecność szukanej frazy kolejno we wszystkich opisach zadań w bazie danych. Jeżli fraza znajduje się w opisie, pojedyncze zadanie jest dodawane do listy. Jeżeli nie to jest pomijany. Lista obiektów jest przekazana do wyświetlenia w pliku index.html.
 
 #### panel administratora
 Dodana wyszukiwarka i wyświetlanie ID zadania opisem na liście.
@@ -29,6 +29,7 @@ Dodana wyszukiwarka i wyświetlanie ID zadania opisem na liście.
 - paginator - ograniczy ilość etykiet na stronie
 - status etykiety - kryterium wykonalności, kolory, przesuwanie w poziomie
 - pozycjonowanie etykiet na liście - można je przesuwać w pionie
+- responsywny front-end - wygląd zmienia się wg. wymiarów ekranu, dostosowanie do np. tabletów i telefonów
 - daty
 - statystyki
 - rozbudowane filtry w wszukiwarce
