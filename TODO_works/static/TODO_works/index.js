@@ -7,20 +7,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function addtask() {
 
-    let description = document.querySelector('#description').value;
+    let text = document.querySelector('#description').value;
 
     fetch('/add_task', {
-        method: 'POST',
-        body: JSON.stringify({
-            description: description
+        method:'POST',
+        body:JSON.stringify({
+        description: text
         }),
     })
-    .then(response =>  response.text().then(data => ({status: response.status})))
+    .then(response => response.json())
     .then(result => {
-        if (result.status == "200") {
-            document.location.href="/";
-        } else {
-            alert('Error: ' + result.status);
-        }
+    if (result.message == "OK") {
+        document.location.href="/";
+    } else {
+        alert(result.error);
+    }
     });
 }

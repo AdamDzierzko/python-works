@@ -1,7 +1,7 @@
 import json
 
 from django.shortcuts import render
-from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
+from django.http import HttpRequest, HttpResponse, HttpResponseRedirect, JsonResponse
 from django.urls import reverse
 from django.views.decorators.csrf import csrf_exempt
 
@@ -31,13 +31,14 @@ def add_new_task(request: HttpRequest) -> HttpResponse:
     :param HttpRequest request: HttpRequest from index.
     :return: redirect to main page
     """
+
     data = json.loads(request.body)
 
     task = Task()
     task.opis = data.get("description", "")
     task.save()
 
-    return HttpResponseRedirect(reverse("index"))
+    return JsonResponse({"message": "OK"}, status=201)
 
 
 def delete_task(request: HttpRequest, task_id: int) -> HttpResponseRedirect:

@@ -14,7 +14,7 @@
 </div>
 
 <div class="inline-div-add">
-    <form action="{% url 'add_task' %}" method="post" id="add_task_form">
+    <form id="add_task_form">
         {% csrf_token %}
         <span class="add">Opis zadania</span>
         <textarea class="form-control" id="description" name="description" required="required" placeholder="Opis zadania"></textarea>
